@@ -1,6 +1,12 @@
-#  Amazon Automation (Playwright)
+# Amazon Automation (Playwright)
 
-##  Overview
+## Step 0: Unzip the Project
+
+First unzip the downloaded ZIP project folder before running anything.
+
+---
+
+## Overview
 
 Automates Amazon workflows:
 
@@ -12,26 +18,28 @@ Automates Amazon workflows:
 
 ---
 
-## ⚙️ Setup
+## Setup
 
-```bash
+### Install Dependencies
+
+```bash id="c7xk3n"
 npm install
 npx playwright install
 ```
 
 ---
 
-##  Run Tests
+## Run Tests
 
-```bash
+```bash id="m9k2qp"
 npx playwright test
 ```
 
 ---
 
-##  Structure
+## Structure
 
-```
+```id="3f9k2v"
 tests/
   iphone.spec.js
   galaxy.spec.js
@@ -42,28 +50,21 @@ playwright.config.js
 
 ## Parallel Execution
 
-```js
+```js id="b2l7re"
 fullyParallel: true,
 workers: 2
 ```
 
 ---
 
-## Time Limit
+## Test Cases
 
-* Each test has a default timeout of **30 seconds**
-* Proper waits (`waitForSelector`) are used to avoid timeout failures
-
----
-
-##  Test Cases
-
-* iPhone search & add to cart
-* Galaxy search & add to cart
+* iPhone search and add to cart
+* Galaxy search and add to cart
 
 ---
 
-##  Output
+## Output
 
 Prints product price in console.
 
