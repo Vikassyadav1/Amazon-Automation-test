@@ -1,14 +1,74 @@
-# Amazon Automation Test
+#  Amazon Automation (Playwright)
 
-## Setup
-1. Install Node.js
-2. Run: npm install
-3. Run: npx playwright install
+##  Overview
 
-## Run Tests
+Automates Amazon workflows:
+
+* Search iPhone & Samsung Galaxy
+* Open product page
+* Extract price
+* Add to cart
+* Run tests in parallel
+
+---
+
+## ⚙️ Setup
+
+```bash
+npm install
+npx playwright install
+```
+
+---
+
+##  Run Tests
+
+```bash
 npx playwright test
+```
 
-## Features
-- Test Case 1: Search iPhone and add to cart
-- Test Case 2: Search Galaxy and add to cart
-- Parallel execution enabled
+---
+
+##  Structure
+
+```
+tests/
+  iphone.spec.js
+  galaxy.spec.js
+playwright.config.js
+```
+
+---
+
+## Parallel Execution
+
+```js
+fullyParallel: true,
+workers: 2
+```
+
+---
+
+## Time Limit
+
+* Each test has a default timeout of **30 seconds**
+* Proper waits (`waitForSelector`) are used to avoid timeout failures
+
+---
+
+##  Test Cases
+
+* iPhone search & add to cart
+* Galaxy search & add to cart
+
+---
+
+##  Output
+
+Prints product price in console.
+
+---
+
+## Note
+
+Amazon UI is dynamic; selectors may change.
