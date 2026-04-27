@@ -1,10 +1,5 @@
 # Amazon Automation (Playwright)
 
-## Step 0: Unzip the Project
-
-First unzip the downloaded ZIP project folder before running anything.
-
----
 
 ## Overview
 
